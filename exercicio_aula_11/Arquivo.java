@@ -78,6 +78,7 @@ public class Arquivo {
             bufferSaida = new BufferedWriter(geradorFluxoSaida);
 
             bufferSaida.write("ID: " + jogo.getId() + ", Nome: " + jogo.getNome() + ", Gênero: " + jogo.getGenero());
+            bufferSaida.newLine();
         }catch (Exception e){
             System.err.printf(String.valueOf(e));
         } finally {
