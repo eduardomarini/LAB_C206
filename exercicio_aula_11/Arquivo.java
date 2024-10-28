@@ -73,7 +73,7 @@ public class Arquivo {
         OutputStreamWriter geradorFluxoSaida = null;
         BufferedWriter bufferSaida = null;
         try {
-            fluxoSaida = new FileOutputStream("jogos.txt");
+            fluxoSaida = new FileOutputStream("jogos.txt", true); // true -> permite a adição de conteúdo sem sobrescrever o arquivo
             geradorFluxoSaida = new OutputStreamWriter(fluxoSaida);
             bufferSaida = new BufferedWriter(geradorFluxoSaida);
 
