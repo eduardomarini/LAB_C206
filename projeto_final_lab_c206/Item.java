@@ -24,17 +24,17 @@ public class Item {
         return descricao;
     }
 
-    public void setName(String name) {
+    public void setNome(String name) {
         this.name = nome;
     }
 
-    public void setDescription(String description) {
+    public void setDescricao(String description) {
         this.description = descicao;
     }
 
     @Override
     public String toString() {
-        return "ID: " + id + ", Nome: " + nome + ", Descrição: " + descricao;
+        return "ID: " + ID + ", Nome: " + nome + ", Descrição: " + descricao;
     }
     
 }

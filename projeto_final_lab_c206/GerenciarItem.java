@@ -12,7 +12,7 @@ public class GerenciarItem {
 
     public Item procurarPorID(String ID) {
         for (Item item : items) {
-            if (item.getId().equalsIgnoreCase(id)) {
+            if (item.getID().equalsIgnoreCase(ID)) {
                 return item;
             }
         }
@@ -20,9 +20,9 @@ public class GerenciarItem {
     }
 
     public boolean atualizarItem(String ID, String novoName, String novaDescricao) {
-        Item item = procurarPorID(id);
+        Item item = procurarPorID(ID);
         if (item != null) {
-            item.setNome(novoName);
+            item.setNome(novoNome);
             item.setDescricao(novaDescricao);
             return true;
         }
@@ -30,7 +30,7 @@ public class GerenciarItem {
     }
 
     public boolean deleteItem(String ID) {
-        Item item = procurarPorID(id);
+        Item item = procurarPorID(ID);
         if (item != null) {
             items.remove(item);
             return true;
