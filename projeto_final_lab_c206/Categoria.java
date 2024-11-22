@@ -12,6 +12,10 @@ public class Categoria extends Livro {
         return categoria;
     }
 
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", Digite a categoria do livro: " + categoria;
