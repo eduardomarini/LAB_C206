@@ -29,9 +29,11 @@ public class Main {
                     String nome = scanner.nextLine();
                     System.out.println("Digite o autor do livro: ");
                     String autor = scanner.nextLine();
-                    Livro livro = new Livro(ID, nome, autor);
-                    gerenciarLivro.addLivro(livro);
-                    System.out.println("Livro adicionado com sucesso!");
+                    System.out.print("Digite a categoria do livro: ");
+                    String categoriaNome = scanner.nextLine();
+                    Categoria categoria = new Categoria(ID, nome, autor, categoriaNome);
+                    gerenciarLivro.addLivro(categoria);
+                    System.out.println("Livro cadastrado com sucesso!");
                     break;
                 case 2:
                     System.out.println("Digite o ID do livro a ser buscado: ");
@@ -50,7 +52,9 @@ public class Main {
                     nome = scanner.nextLine();
                     System.out.println("Digite o novo autor do livro: ");
                     autor = scanner.nextLine();
-                    boolean atualizado = gerenciarLivro.atualizarLivro(ID, nome, autor);
+                    System.out.print("Digite a nova categoria do livro: ");
+                    String novaCategoria = scanner.nextLine();
+                    boolean atualizado = gerenciarLivro.atualizarLivro(ID, nome, autor, novaCategoria);
                     if (atualizado) {
                         System.out.println("Livro atualizado com sucesso!");
                     } else {
